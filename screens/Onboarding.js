@@ -39,7 +39,7 @@ export default function Onboarding ({ navigation }) {
     <View style={styles.slide}>
       <StatusBar backgroundColor='#000fff'/>
       <View style={{backgroundColor:'#000fff',borderBottomLeftRadius:30,borderBottomRightRadius:30,width: width*1,height:height*0.5,justifyContent:'center',alignItems:'center'}}>
-        <View style={{backgroundColor:'#2b5be3',height:220, width:220,marginTop:30,borderRadius:200}}>
+        <View style={{backgroundColor:'#005eff',height:220, width:220,marginTop:30,borderRadius:200}}>
           </View>
       <Image source={item.image} style={styles.image} resizeMode="contain" />
       </View>
@@ -54,7 +54,7 @@ export default function Onboarding ({ navigation }) {
 
   // Custom buttons
   const renderNextButton = () => (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={onDone}>
       <Text style={styles.buttonText}>Next</Text>
     </TouchableOpacity>
   );

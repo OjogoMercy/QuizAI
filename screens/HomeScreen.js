@@ -28,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
   const renderItem1 = ({ item }) => (
-    <View style={[styles.card,{backgroundColor:'white'} ]}>
+    <View style={[styles.card,{backgroundColor:'white'}]}>
       <Image  source={item.Image} style={styles.image}/>
       <Text style={[styles.cardText, {color:item.color}, {alignSelf:''}]}>{item.text}</Text>
     </View>
@@ -38,12 +38,12 @@ const HomeScreen = ({ navigation }) => {
     <View style={{ flex: 1, backgroundColor: '#f5f5f7', alignItems: 'center' }}>
       <View style={{ backgroundColor: '#1D4ED8', height: 200, borderBottomEndRadius: 30, borderBottomLeftRadius: 30, width: '100%', padding: 15 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          <View style={styles.iconbox}>
+          <TouchableOpacity style={styles.iconbox}>
             <Icon name="appstore1" size={20} color="#fff"  />
-          </View>
-          <View style={styles.iconbox}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconbox}>
             <Icon1 name="notifications" size={20} color="#fff" />
-          </View>
+          </TouchableOpacity>
         </View>
         <Text style={{ color: 'white', fontSize: 18 }}>Welcome Back!</Text>
         <Text style={{ color: 'white', fontSize: 28, fontWeight: 'bold' }}>Ojogo Mercy</Text>
@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
     margin: 12,
     alignItems:'flex-start',
     height:150,
+    
     
   },
   cardTitle: {
