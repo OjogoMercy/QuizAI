@@ -28,10 +28,10 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
   const renderItem1 = ({ item }) => (
-    <View style={[styles.card,{backgroundColor:'white'}]}>
+    <TouchableOpacity style={[styles.card,{backgroundColor:'white'}]}>
       <Image  source={item.Image} style={styles.image}/>
       <Text style={[styles.cardText, {color:item.color}, {fontSize:20}]}>{item.text}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -60,7 +60,9 @@ const HomeScreen = ({ navigation }) => {
       />
       <View style={{flexDirection:'row' ,marginTop:110,width:'92%',justifyContent:'space-between'}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>Choose Categories</Text>
+        <TouchableOpacity>
         <Text style={{color:'#02DBF5', fontWeight:'bold'}}>See All</Text>
+        </TouchableOpacity>
          </View>
          <FlatList
         data={Data1}
