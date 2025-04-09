@@ -22,7 +22,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={[styles.card,{backgroundColor:item.color} ]}>
       <Text style={styles.cardTitle}>{item.title}</Text>
       <Text style={styles.cardText}>{item.text}</Text>
-      <TouchableOpacity style={{backgroundColor:'white',width:40,height:30,padding:5,borderRadius:5,opacity:0.8,paddingHorizontal:10}}  onPress={() => navigation.navigate('CreateQuiz')}>
+      <TouchableOpacity style={{backgroundColor:'white',width:40,height:30,padding:5,borderRadius:5,opacity:0.8,paddingHorizontal:10,marginTop:15}}  onPress={() => navigation.navigate('CreateQuiz')}>
       <Icon name="arrowright" size={20} color={item.color} style={{opacity:0.8}}/>
       </TouchableOpacity>
     </View>
@@ -30,7 +30,7 @@ const HomeScreen = ({ navigation }) => {
   const renderItem1 = ({ item }) => (
     <View style={[styles.card,{backgroundColor:'white'}]}>
       <Image  source={item.Image} style={styles.image}/>
-      <Text style={[styles.cardText, {color:item.color}, {alignSelf:''}]}>{item.text}</Text>
+      <Text style={[styles.cardText, {color:item.color}, {fontSize:20}]}>{item.text}</Text>
     </View>
   );
 
@@ -104,12 +104,10 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 16,
-    marginBottom: 6,
     color:'white'
   },
   cardText: {
-    fontSize: 20,
-    marginBottom: 8,
+    fontSize: 28,
     textAlign: 'center',
     color:'white',
     fontWeight:'bold'
