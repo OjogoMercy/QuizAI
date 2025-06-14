@@ -3,6 +3,8 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet,ScrollView } from '
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { StatusBar } from 'react-native';
 import styles from '../Components/Styles'
+import Header from '@/Components/Header';
+import Button from '@/Components/Button';
 
 const SignUp = ({ navigation }) => {
     const [fullName, setFullName] = useState('');
@@ -14,19 +16,7 @@ const SignUp = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'#1D4ED8'}/>
-      <View style={styles.header}>
-        <View style={{flexDirection:'row'}}><Text style={styles.logo}>Qui</Text><Text style={{fontSize:34,color:'#fff',fontWeight:'bold'}}>zai</Text></View>
-        <Text style={styles.title}>Register New Account</Text>
-        <Text style={styles.subtitle}>
-          Already have an account? 
-          <Text style={styles.signIn} onPress={() => navigation.navigate('SignIn')}>
-            Sign In
-          </Text>
-        </Text>
-      </View>
-      <View style={{width:300,height:15,backgroundColor:'#2b5be3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
-      <View style={{width:250,height:15,backgroundColor:'#406ae3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
-
+    <Header title={'Register New Account?'} text={'Sign Up'} Custom={'Already have an account?'}/>
       <ScrollView style={styles.form}>
         <View style={styles.inputContainer}>
           <Ionicons name="person-outline" size={20} color="#000" style={styles.icon} />
@@ -77,9 +67,7 @@ const SignUp = ({ navigation }) => {
             onChangeText={setConfirmPassword}
           />
         </View>
-         <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('SignIn')}>
-          <Text style={styles.buttonText}>Sign Up</Text>
-        </TouchableOpacity>
+         <Button onPress={()=> navigation.navigate('SignIn')} text={'Sign Up'}/>
       </ScrollView>
      
     </View>
