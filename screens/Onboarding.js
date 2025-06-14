@@ -7,28 +7,29 @@ import { StatusBar } from 'react-native';
 
 
 const { width, height } = Dimensions.get('window');
-const slides = [
-  {
-    key: '1',
-    title: 'Create your own game',
-    text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
-    image:Images.book,
-  },
-  {
-    key: '2',
-    title: 'Challenge Your Friends',
-    text: 'QuizAI’s mission is to deliver high-quality questions in every topic you can imagine.Make your Quiz and challenge your friends instantly',
-    image:Images.friend,
-  },
-  {
-    key: '3',
-    title: 'Watch Leaderboard',
-    text: 'Our leaderboard allows you to measure your progress and see how you stack up against players from all over the world.',
-    image: Images.trophy,
-  },
-];
 
 export default function Onboarding ({ navigation }) {
+  const slides = [
+    {
+      key: '1',
+      title: 'Create your own game',
+      text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      image:Images.book,
+    },
+    {
+      key: '2',
+      title: 'Challenge Your Friends',
+      text: 'QuizAI’s mission is to deliver high-quality questions in every topic you can imagine.Make your Quiz and challenge your friends instantly',
+      image:Images.friend,
+    },
+    {
+      key: '3',
+      title: 'Watch Leaderboard',
+      text: 'Our leaderboard allows you to measure your progress and see how you stack up against players from all over the world.',
+      image: Images.trophy,
+    },
+  ];
+  
   // Navigate to Home on Done
   const onDone = () => {
     navigation.replace('SignUp');
@@ -127,8 +128,14 @@ const styles = StyleSheet.create({
   },
   dot: {
     backgroundColor: '#bbb',
+    height:4,
+    width:10,
+    marginTop:-70
   },
   activeDot: {
     backgroundColor: '#007bff',
+    height:4,
+    width:10,
+    marginTop:-70
   },
 });

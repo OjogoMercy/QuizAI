@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet,ScrollView } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { StatusBar } from 'react-native';
 
 const SignUp = ({ navigation }) => {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [secureTextEntry, setSecureTextEntry] = useState(true);
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [secureTextEntry, setSecureTextEntry] = useState(true);
 ``
   return (
     <View style={styles.container}>
@@ -26,7 +26,7 @@ const SignUp = ({ navigation }) => {
       <View style={{width:300,height:15,backgroundColor:'#2b5be3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
       <View style={{width:250,height:15,backgroundColor:'#406ae3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
 
-      <View style={styles.form}>
+      <ScrollView style={styles.form}>
         <View style={styles.inputContainer}>
           <Ionicons name="person-outline" size={20} color="#000" style={styles.icon} />
           <TextInput
@@ -76,11 +76,11 @@ const SignUp = ({ navigation }) => {
             onChangeText={setConfirmPassword}
           />
         </View>
-
-        <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('SignIn')}>
+         <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
+     
     </View>
   );
 };

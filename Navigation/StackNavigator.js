@@ -11,7 +11,7 @@ import Onboarding from './../screens/Onboarding';
 import SignIn from './../screens/SignIn';
 import SignUp from './../screens/SignUp';
 import BottomTabNavigator from './BottomTab';
-import { StatusBar } from 'react-native';
+import DrawerNavigator from './DrawerTab';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +29,7 @@ export default function StackNavigator() {
       <Stack.Screen name="Onboarding" component={Onboarding} />
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="SignUp" component={SignUp} />
+      <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
     </Stack.Navigator>
   );
 }

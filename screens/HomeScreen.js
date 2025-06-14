@@ -3,13 +3,15 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Images from '@/assets/images/Images';
+import { useNavigation } from 'expo-router';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({  }) => {
+  const navigation = useNavigation()
   const Data = [
-    { id: '1', title: 'Create', text: 'Quiz',color:'#FF506A' },
-    { id: '2', title: 'Join in', text: 'Quiz',color:'#4c8cff' },
-    { id: '3', title: 'Compete', text: 'Quiz',color:'#63cc42' },
-    { id: '4', title: 'Play', text: 'Games',color:'#02DBF5' },
+    { id: '1', title: 'Create', text: 'Quiz',color:'#FF506A', onPress: () => navigation.navigate("CreateQuiz") },
+    { id: '2', title: 'Join in', text: 'Quiz',color:'#4c8cff', onPress: () => navigation.navigate("LeaderBoard") },
+    { id: '3', title: 'Random', text: 'Quiz',color:'#63cc42', onPress: () => navigation.navigate("CreateQuiz") },
+    { id: '4', title: 'Challenge', text: 'Friends',color:'#02DBF5', onPress: () => navigation.navigate("History") },
   ];
   const Data1 = [
     { id: '1', title: 'Create', text: 'Science',color:'#FF506A',Image:Images.plane },
@@ -22,7 +24,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={[styles.card,{backgroundColor:item.color} ]}>
       <Text style={styles.cardTitle}>{item.title}</Text>
       <Text style={styles.cardText}>{item.text}</Text>
-      <TouchableOpacity style={{backgroundColor:'white',width:40,height:30,padding:5,borderRadius:5,opacity:0.8,paddingHorizontal:10,marginTop:15}}  onPress={() => navigation.navigate('CreateQuiz')}>
+      <TouchableOpacity style={{backgroundColor:'white',width:40,height:30,padding:5,borderRadius:5,opacity:0.8,paddingHorizontal:10,marginTop:15}}  onPress={item.onPress}>
       <Icon name="arrowright" size={20} color={item.color} style={{opacity:0.8}}/>
       </TouchableOpacity>
     </View>
