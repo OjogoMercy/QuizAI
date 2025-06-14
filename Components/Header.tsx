@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import styles from './Styles'
 
-export default function Header({navigation}) {
+export default function Header({navigation,title,Custom,text}) {
   return (
     <View style={styles.header}>
     <View style={{flexDirection:'row'}}><Text style={styles.logo}>Qui</Text><Text style={{fontSize:34,color:'#fff',fontWeight:'bold'}}>zai</Text></View>
