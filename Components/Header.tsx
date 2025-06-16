@@ -15,8 +15,8 @@ export default function Header({navigation,title,Custom,text,onPress}) {
       </Text>
     </Text>
   </View>
-  <View style={{width:300,height:15,backgroundColor:'#2b5be3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
-  <View style={{width:250,height:15,backgroundColor:'#406ae3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
+  <View style={styles.rag}></View>
+  <View style={[styles.rag, {backgroundColor:'#406ae3',width:'70%'}]}></View>
   </>
   )
 }

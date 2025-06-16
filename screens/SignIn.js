@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { StatusBar } from 'react-native';
+import Header from '@/Components/Header';
+import Button from '@/Components/Button';
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -9,19 +11,7 @@ const SignIn = ({navigation}) => {
   return (
     <View style={{flex:1,backgroundColor:'#fff'}}>
       <StatusBar backgroundColor={'#1D4ED8'}/>
-       <View style={styles.header}>
-        <View style={{flexDirection:'row'}}><Text style={styles.logo}>Qui</Text><Text style={{fontSize:34,color:'#fff',fontWeight:'bold'}}>zai</Text></View>
-        <Text style={styles.title}>Sign In</Text>
-        <Text style={styles.subtitle}>
-          Already have an account? 
-          <Text style={{ color: '#02DBF5'}} onPress={() => navigation.navigate('SignUp')}>
-            Sign Up
-          </Text>
-        </Text>
-      </View>
-      <View style={{width:300,height:15,backgroundColor:'#2b5be3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
-      <View style={{width:250,height:15,backgroundColor:'#406ae3',borderBottomLeftRadius:30,borderBottomRightRadius:30,alignSelf:'center'}}></View>
-      
+      <Header title={'Already Have An Account?'} text={'Sign in'} Custom={'Already have an account?'}/>
       <View style={styles.form}>     
         <View style={styles.inputContainer}>
           <MaterialIcons name="email" size={20} color="#000" style={styles.icon} />
@@ -57,9 +47,9 @@ const SignIn = ({navigation}) => {
             Forgot Password?
           </Text>
       </View>
-      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('BottomTab')}>
-          <Text style={styles.buttonText}>Sign In</Text>
-        </TouchableOpacity>
+      <View style={{width:'90%',alignSelf:'center'}}>
+      <Button text={'Sign In'} onPress={()=> navigation.navigate('HomeScreen')}/>
+      </View>
     </View>
   )
 }
@@ -115,20 +105,5 @@ const styles = StyleSheet.create({
   form: {
     paddingHorizontal: 20,
     marginTop: 10,
-  },
-  button: {
-    backgroundColor: '#1D4ED8',
-    paddingVertical: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-    marginTop: 25,
-    elevation:5,
-    width:'90%',
-    alignSelf:'center'
-
-  },
-  buttonText: {
-    fontSize: 16,
-    color: '#fff',
   },
  });

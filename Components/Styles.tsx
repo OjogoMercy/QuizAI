@@ -66,6 +66,12 @@ const styles = StyleSheet.create({
       fontSize: 16,
       color: '#fff',
     },
+    rag:{width:300,
+      height:14,
+      backgroundColor:'#2b5be3',
+      borderBottomLeftRadius:30,
+      borderBottomRightRadius:30,
+    alignSelf:'center'},
   });
   export default styles
   
