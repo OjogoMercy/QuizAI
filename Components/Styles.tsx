@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
       borderBottomLeftRadius:30,
       borderBottomRightRadius:30,
     alignSelf:'center'},
+    eyeIcon:{marginLeft:10}
   });
   export default styles
   

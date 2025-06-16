@@ -5,7 +5,7 @@ import { StatusBar } from 'react-native';
 import styles from '../Components/Styles'
 import Header from '@/Components/Header';
 import Button from '@/Components/Button';
-
+import CustomTextInput from '@/Components/CustomTextInput';
 const SignUp = ({ navigation }) => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -18,15 +18,7 @@ const SignUp = ({ navigation }) => {
       <StatusBar backgroundColor={'#1D4ED8'}/>
     <Header title={'Register New Account?'} text={'Sign Up'} Custom={'Already have an account?'}/>
       <ScrollView style={styles.form}>
-        <View style={styles.inputContainer}>
-          <Ionicons name="person-outline" size={20} color="#000" style={styles.icon} />
-          <TextInput
-            style={styles.input}
-            placeholder="Full Name"
-            value={fullName}
-            onChangeText={setFullName}
-          />
-        </View>
+       <CustomTextInput value={fullName} placeholder={'Enter your name'} onChangeText={setFullName}  />
 
         <View style={styles.inputContainer}>
           <MaterialIcons name="email" size={20} color="#000" style={styles.icon} />
