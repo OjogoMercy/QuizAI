@@ -3,7 +3,9 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Images from '@/assets/images/Images';
-import { useNavigation } from 'expo-router';
+import { useNavigation } from '@react-navigation/native';
+import styles from '@/Components/Styles';
+
 
 const HomeScreen = ({  }) => {
   const navigation = useNavigation()
@@ -24,13 +26,13 @@ const HomeScreen = ({  }) => {
     <View style={[styles.card,{backgroundColor:item.color} ]}>
       <Text style={styles.cardTitle}>{item.title}</Text>
       <Text style={styles.cardText}>{item.text}</Text>
-      <TouchableOpacity style={{backgroundColor:'white',width:40,height:30,padding:5,borderRadius:5,opacity:0.8,paddingHorizontal:10,marginTop:15}}  onPress={item.onPress}>
+      <TouchableOpacity style={styles.arrow}  onPress={item.onPress} activeOpacity={0.7}>
       <Icon name="arrowright" size={20} color={item.color} style={{opacity:0.8}}/>
       </TouchableOpacity>
     </View>
   );
   const renderItem1 = ({ item }) => (
-    <TouchableOpacity style={[styles.card,{backgroundColor:'white'}]}>
+    <TouchableOpacity style={[styles.card,{backgroundColor:'white'}]} activeOpacity={0.7} onPress={()=> navigation.navigate('Details',{item})}>
       <Image  source={item.Image} style={styles.image}/>
       <Text style={[styles.cardText, {color:item.color}, {fontSize:20}]}>{item.text}</Text>
     </TouchableOpacity>
@@ -38,12 +40,12 @@ const HomeScreen = ({  }) => {
 
   return (
     <View style={{ flex: 1, backgroundColor: '#f5f5f7', alignItems: 'center' }}>
-      <View style={{ backgroundColor: '#1D4ED8', height: 200, borderBottomEndRadius: 30, borderBottomLeftRadius: 30, width: '100%', padding: 15 }}>
+      <View style={styles.con}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          <TouchableOpacity style={styles.iconbox}>
+          <TouchableOpacity style={styles.iconbox} activeOpacity={0.7}>
             <Icon name="appstore1" size={20} color="#fff"  />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.iconbox}>
+          <TouchableOpacity style={styles.iconbox} activeOpacity={0.7}>
             <Icon1 name="notifications" size={20} color="#fff" />
           </TouchableOpacity>
         </View>
@@ -81,44 +83,4 @@ const HomeScreen = ({  }) => {
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({
-  iconbox: {
-    backgroundColor: '#1d5ed8',
-    width: '10%',
-    height: 35,
-    padding: 6,
-    elevation: 5,
-    borderRadius: 10,
-    marginBottom: 15,
-  },
-  flatListContainer: {
-    paddingHorizontal: 10,
-    paddingTop: 20,
-  },
-  card: {
-    width: 140,
-    padding: 16,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 10,
-    margin: 12,
-    alignItems:'flex-start',
-    height:150,
-    
-    
-  },
-  cardTitle: {
-    fontSize: 16,
-    color:'white'
-  },
-  cardText: {
-    fontSize: 28,
-    textAlign: 'center',
-    color:'white',
-    fontWeight:'bold'
-  },
-  image:{
-    resizeMode:'contain',
-    height:100,
-    width:100
-  },
-});
+

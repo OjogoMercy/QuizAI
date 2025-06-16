@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.1,
       shadowRadius: 5,
       elevation: 2,
+    
     },
     input: {
       flex: 1,
@@ -72,7 +73,58 @@ const styles = StyleSheet.create({
       borderBottomLeftRadius:30,
       borderBottomRightRadius:30,
     alignSelf:'center'},
-    eyeIcon:{marginLeft:10}
+    eyeIcon:{marginLeft:10},
+    iconbox: {
+      backgroundColor: '#1d5ed8',
+      width: '10%',
+      height: 35,
+      padding: 6,
+      elevation: 5,
+      borderRadius: 10,
+      marginBottom: 15,
+    },
+    arrow:{backgroundColor:'white',
+    width:40,
+    height:30,
+    padding:5,
+    borderRadius:5,
+    opacity:0.8,
+    paddingHorizontal:10,
+    marginTop:15},
+    flatListContainer: {
+      paddingHorizontal: 10,
+      paddingTop: 20,
+    },
+    con:{ backgroundColor: '#1D4ED8',
+     height: 200,
+      borderBottomEndRadius: 30,
+       borderBottomLeftRadius: 30, 
+       width: '100%', 
+    padding: 15 },
+    card: {
+      width: 140,
+      padding: 16,
+      backgroundColor: '#f0f0f0',
+      borderRadius: 10,
+      margin: 12,
+      alignItems:'flex-start',
+      height:150,
+    },
+    cardTitle: {
+      fontSize: 16,
+      color:'white'
+    },
+    cardText: {
+      fontSize: 28,
+      textAlign: 'center',
+      color:'white',
+      fontWeight:'bold'
+    },
+    image:{
+      resizeMode:'contain',
+      height:100,
+      width:100
+    },
   });
   export default styles
   
