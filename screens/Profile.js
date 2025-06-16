@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import styles from '@/Components/Styles'
 import CustomHeader from '@/Components/CustomHeader'
@@ -36,9 +36,7 @@ const Profile = () => {
             ))
           }
           </View>
-        </View>
-        
-         
+        </View>        
       </View>
     </View>
   )
