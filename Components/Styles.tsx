@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       elevation: 3,
-      marginHorizontal: 10,
+      marginHorizontal: 7,
     },
     cover:{
           flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 20,
+    paddingVertical: 10,
     },
     icons: {
       width: 40,

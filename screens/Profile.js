@@ -25,7 +25,8 @@ const Profile = () => {
         </View>
       </View>
       <View style={[styles.float1, {position:'absolute',bottom:80,height:250}]}>
-          <Text style={{color:'gray'}}>Badges</Text>
+        <View style={{padding:5,backgroundColor:'#f2f2f2',borderRadius:10}}>
+        <Text style={{color:'gray',alignSelf:'flex-start',fontWeight:'bold',marginLeft:10}}>Badges</Text>
           <View style={styles.cover}>
           {
             badges.map((_,index) =>(
@@ -35,6 +36,8 @@ const Profile = () => {
             ))
           }
           </View>
+        </View>
+        
          
       </View>
     </View>
