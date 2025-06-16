@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#f2f2f2',
     },
     header: {
       backgroundColor: '#1D4ED8',
@@ -95,11 +95,28 @@ const styles = StyleSheet.create({
       paddingHorizontal: 10,
       paddingTop: 20,
     },
+    profile:{
+      height:100,
+      width:100,
+      borderRadius:100,
+      borderWidth:3,
+      borderColor:'white',
+      alignSelf:'center'
+    },
+    float:{
+      backgroundColor:'white',
+      width:'90%',
+      borderRadius:20,
+    },
     con:{ backgroundColor: '#1D4ED8',
      height: 200,
       borderBottomEndRadius: 30,
        borderBottomLeftRadius: 30, 
        width: '100%', 
+    padding: 15 },
+    con2:{ backgroundColor: '#1D4ED8',
+     height: 130,
+     width: '100%', 
     padding: 15 },
     card: {
       width: 140,
@@ -124,6 +141,11 @@ const styles = StyleSheet.create({
       resizeMode:'contain',
       height:100,
       width:100
+    },
+    title1:{
+      fontSize: 23,
+      color: '#fff',
+      fontWeight: 'bold',
     },
   });
   export default styles

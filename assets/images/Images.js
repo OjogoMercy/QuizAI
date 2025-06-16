@@ -6,6 +6,7 @@ const Images = {
     ball: require('../images/ball.png'),
     earth: require('../images/earth.png'),
     tree: require('../images/tree.png'),
+    profile: require('../images/ROSE.jpg'),
   };
   
   export default Images;
