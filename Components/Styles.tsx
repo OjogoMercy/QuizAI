@@ -107,6 +107,58 @@ const styles = StyleSheet.create({
       backgroundColor:'white',
       width:'90%',
       borderRadius:20,
+      alignSelf:'center',
+      alignItems:'center',
+      height:250,
+      padding:20,
+    },
+    badge: {
+      width: 70,
+      height: 70,
+      backgroundColor: '#2D46B9',
+      borderRadius: 16,
+      alignItems: 'center',
+      justifyContent: 'center',
+      elevation: 3,
+      marginHorizontal: 10,
+    },
+    cover:{
+          flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 20,
+    },
+    icons: {
+      width: 40,
+      height: 40,
+      resizeMode: 'contain',
+    },
+    float1:{
+      backgroundColor:'white',
+      width:'90%',
+      borderRadius:20,
+      alignSelf:'center',
+      alignItems:'center',
+      height:250,
+      padding:20,
+    },
+    fly:{
+      width: 35,
+      height: 35,
+      position: 'absolute',
+      bottom: 15,
+      left: 75,
+    
+    },
+    letter:{
+     color:'white'
+    },
+    box:{
+      backgroundColor:'#1D4ED8',
+      borderRadius:10,
+      alignItems:'center',
+      justifyContent:'center',
+      padding:10,
+      margin:5
     },
     con:{ backgroundColor: '#1D4ED8',
      height: 200,
