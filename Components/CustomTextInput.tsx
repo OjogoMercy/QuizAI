@@ -1,13 +1,11 @@
-import { View, Text,TouchableOpacity } from 'react-native'
+import { View, Text,TouchableOpacity,TextInput } from 'react-native'
 import React from 'react'
 import styles from './Styles'
 import { MaterialIcons } from '@expo/vector-icons'
 import { useState } from 'react'
 
-export default function CustomTextInput({value,onChangeText, placeholder, keyboardType='dafault', secureTextEntry=false, icon,isPassword=false}) {
+export default function CustomTextInput({value,onChangeText, placeholder, secureTextEntry=false, icon,isPassword=false}) {
   const [hidePassword, setHidePassword] = useState(secureTextEntry);
-  // const [secureTextEntry, setSecureTextEntry] = useState(true);
-``
   return (
     <View style={styles.inputContainer}>
           <MaterialIcons name={icon} size={20} color="#000" style={styles.icon} />
@@ -15,16 +13,16 @@ export default function CustomTextInput({value,onChangeText, placeholder, keyboa
             style={styles.input}
             placeholder={placeholder}
             value={value}
-            keyboardType={keyboardType}
+            keyboardType='default'
             onChangeText={onChangeText}
-            secureTextEntry={secureTextEntry}
+            secureTextEntry={isPassword ? hidePassword : secureTextEntry}
           />
             {isPassword && (
         <TouchableOpacity onPress={() => setHidePassword(!hidePassword)}>
           <MaterialIcons
             name={hidePassword ? 'visibility-off' : 'visibility'}
             size={20}
-            color="#888"
+            color="#888"  
             style={styles.eyeIcon}
           />
         </TouchableOpacity>
