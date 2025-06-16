@@ -3,9 +3,9 @@ import React from 'react'
 import styles from '@/Components/Styles'
 
 export default function Details() {
-  return (
-    <View>
-      <Text>Details</Text>
+  return (  
+    <View style={styles.container}>
+      <Text>{item.text}</Text>
     </View>
   )
 }

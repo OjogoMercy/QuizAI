@@ -7,8 +7,6 @@ import LeaderBoard from './../screens/LeaderBoard';
 import HomeScreen from './../screens/HomeScreen';
 import CreateQuiz from './../screens/CreateQuiz';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { StatusBar } from 'react-native';
-
 
 const Tab = createBottomTabNavigator();
 const CentralAddButton = ({ children, onPress }) => {

@@ -22,7 +22,7 @@ const SignIn = ({navigation}) => {
         <Text style={{ color: '#02DBF5'}} onPress={() => navigation.navigate('ForgotPassword')}>Forgot Password?</Text>
       </View>
       <View style={{width:'90%',alignSelf:'center'}}>
-      <Button text={'Sign In'} onPress={()=> navigation.navigate('HomeScreen')}/>
+      <Button text={'Sign In'} onPress={()=> navigation.navigate('BottomTab')}/>
       </View>
     </View>
   )
