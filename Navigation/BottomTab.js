@@ -14,6 +14,7 @@ const CentralAddButton = ({ children, onPress }) => {
     <TouchableOpacity
       style={styles.centralButton}
       onPress={onPress}
+      activeOpacity={0.7}
     >
       <View style={styles.addButtonView}>{children}</View>
     </TouchableOpacity>
